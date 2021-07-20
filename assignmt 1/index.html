@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: linear-gradient(#6dc3df, transparent);
+            background-repeat: no-repeat;
+        }
+
+        .container
+        {   
+           display: flex;
+           justify-content: center;
+        }
+
+        table {
+            background-color: white;
+            border: 8px outset rgb(120, 117, 117);
+            padding: 8px;
+            border-spacing: 10px;
+            
+
+        }
+
+
+        td,th {
+            border: 2px solid black;
+            font-size: 25px;
+            padding: 6px 4px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* margin: 4px; */
+
+        }
+
+        #table {
+
+            text-align: center;
+        }
+
+
+        #main {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        form {
+            text-align: left;
+            width: 60%;
+
+        }
+
+        label {
+            margin: 4px;
+            padding: 2px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* font-weight: bold; */
+            font-size: 16px;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        select {
+            margin: 4px;
+            padding: 2px;
+
+        }
+
+        fieldset {
+            padding: 16px;
+            border-color: black;
+        }
+
+        legend {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            margin: 4px;
+            padding: 2px;
+            border-color: gray;
+            border-radius: 4px;
+
+        }
+
+        button {
+            background-color: #1a8ed5e0;
+            color: white;
+            margin-top: 18px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+
+        button:hover {
+            background-color: green;
+            color: honeydew;
+
+        }
+
+        img {
+
+            width: 30%;
+            height: 30%;
+            display: block;
+            margin: auto;
+
+        }
+
+        #success {
+            display: none;
+        }
+
+        #success button {
+            width: 30%;
+            height: 60px;
+            border-radius: 20px;
+            background-color: #1a8ed5e0;
+            color: white;
+
+            display: block;
+
+            margin: auto;
+
+        }
+    </style>
+
+    <script>
+
+        function gif() {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("success").style.display = "block";
+
+        }
+
+        function func2(){
+            document.getElementById("main").style.display = "flex";
+            document.getElementById("success").style.display = "none";
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <h1 id="table">TIMETABLE</h1>
+    <div class="container">
+
+        <table>
+            <tr>
+                <th>Days/Periods</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th></th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+
+                <td rowspan="6" id="break">
+                    <span>B</span><br><span>R</span><br><span>E</span><br><span>A</span><br><span>K</span><br></td>
+                <td>Math</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+
+                <td>Math</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td>Science</td>
+                <td>English</td>
+                <td rowspan="3">Hindi</td>
+
+           
+                <td>Math</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Science</td>
+                <td>English</td>
+              
+                <td>Math</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Science</td>
+                <td>English</td>
+               
+                <td>Math</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+
+                
+                <td colspan="3">Math</td>
+
+
+
+            </tr>
+
+            <tfoot>
+                <th colspan="8">This is Class VIII</th>
+            </tfoot>
+
+
+        </table>
+    </div>
+
+    <h1>My Bio Data</h1>
+
+    <div id="main">
+
+        <!-- form starts -->
+        <form action="#">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <!-- personal details -->
+                <div>
+
+                    <label for="f_name">First Name:</label>
+                    <input type="text" name="f_name" id="f_name" placeholder="First Name">
+
+                    <label for="l_name">Last Name:</label>
+                    <input type="text" name="l_name" id="l_name" placeholder="Last Name">
+
+                </div>
+
+                <div>
+
+
+                    <label for="male">Male:</label>
+                    <input type="radio" id="male" name="gender">
+                    <label for="female">Female:</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="other">Other:</label>
+                    <input type="radio" id="other" name="gender">
+
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <div>
+                    <label for="mail">E-Mail:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Enter Your Email">
+                </div>
+                <div>
+                    <label for="phn">Phone Number:</label>
+                    <input type="number" name="phn" id="phn" placeholder="+91">
+                </div>
+                <div>
+                    <label for="height">Height:</label>
+                    <input type="number" name="height" id="height" placeholder="Height in Feet">
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Education</legend>
+
+                <!-- Educational details -->
+                <div>
+
+                    <label for="sname">School Name:</label>
+                    <input type="text" id="sname" name="sname" placeholder="School Name">
+                </div>
+
+                <div>
+
+
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" name="class" placeholder="Class">
+                </div>
+
+                <div>
+
+
+                    <label for="stream">Stream</label>
+                    <select name="stream" id="stream">
+                        <option value="science">Science</option>
+                        <option value="commerce">Commerce</option>
+                        <option value="arts">Humanities</option>
+
+                    </select>
+                </div>
+
+                <div>
+
+
+                    <label for="marksheet">Marksheet</label>
+                    <input type="file" name="marksheet" id="marksheet">
+
+                </div>
+
+
+
+
+            </fieldset>
+
+
+            <button type="button" onclick="gif()">Submit</button>
+        </form>
+
+    </div>
+
+    <!-- success icon appears -->
+    <div id="success">
+        <h1>Form Submited Successfully</h1>
+        <img src="succ.gif" alt="tick">
+        <button type="button" onclick="window.location.reload()">Back To Home Page</button>
+    </div>
+
+
+</body>
+
+</html>
