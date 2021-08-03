@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:black;
+}
+button{
+    padding:10px 20px;
+    font-size: 18px;
+    color:orangered;
+    background-color: black;
+    border:1px solid orangered;
+    transition: 0.4s;
+}
+button:hover{
+    transform:scale(1.09);
+    color:greenyellow;
+    border:1px solid greenyellow;
+    box-shadow: 0 3px 6px greenyellow;
+    cursor:pointer;
+}
