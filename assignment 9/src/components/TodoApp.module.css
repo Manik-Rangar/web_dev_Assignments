@@ -1,0 +1,15 @@
+.todo-form{
+    background:linear-gradient( rgb(4, 60, 106),white);
+    color: white;
+    padding: 16px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.26);
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.todo-list{
+    list-style: none;
+}
+
+
